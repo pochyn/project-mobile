@@ -1,0 +1,24 @@
+page-home {
+    .back{
+        background: red
+    }
+    .centered {
+        position: fixed;
+        top: 45%;
+        left: 48%;
+        width: 80%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+    .header{
+      text-align: center;
+      color: black;
+    }
+
+    .btn{
+        //padding-top: 30px;
+    }
+    .divider{
+        height: 10px;
+    }
+}

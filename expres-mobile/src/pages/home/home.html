@@ -1,0 +1,27 @@
+
+<ion-content padding class="back">
+  <ion-card class="centered">
+
+    <ion-card-header class="header">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-input type="email" placeholder="Емейл" clearInput [formControl]="emailFormControl" [(ngModel)]="usercreds.email"></ion-input>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list>
+        <ion-item>
+          <ion-input type="password" placeholder="Пароль" clearInput [formControl]="passwordFormControl" [(ngModel)]="usercreds.password" type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div class="divider"></div>
+      <button ion-button color="grey" (click)="login()" class="btn" outline block type="submit">Залогінитись</button>
+      <div class="divider"></div>
+      <p class="header" style="padding-top: 5px;"><a (click)="signup()" style="color: red">Реєстрація</a> | <a (click)="reset()" style="color: red">Забув пароль</a></p>
+    </ion-card-content>
+  
+  </ion-card>
+</ion-content>

@@ -1,0 +1,64 @@
+<!--
+  Generated template for the GrArchievePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Головний Редактор</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)='create()'>
+        <ion-icon color="redish" name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-list-header>Архів</ion-list-header>
+
+    <ion-item text-wrap *ngFor="let post of posts | async">
+      <p>{{post.data.date}}</p>
+      <h2>{{post.data.content}}</h2>
+      <button ion-button small color="redish" (click)='deletePost(post)' > X </button>
+      <button ion-button small color="secondary" (click)='rearchieve(post)'> + </button>
+      <ion-note item-end></ion-note>
+    </ion-item>
+</ion-list>
+</ion-content>
+
+
+<ion-footer no-border>
+
+  <ion-toolbar color="redish">
+      
+      <ion-buttons start>
+        <button ion-button icon-only (click)='gazeta()'>
+          <ion-icon ios="ios-paper-outline" name="paper"></ion-icon>
+        </button>
+
+        <button ion-button icon-only (click)='site()'>
+          <ion-icon ios="ios-laptop-outline" name="laptop"></ion-icon>
+        </button>
+
+        <button ion-button icon-only >
+          <ion-icon ios="ios-folder-open-outline" name="folder-open"></ion-icon>
+        </button>
+
+        <button ion-button icon-only (click)='lviv_page()'>
+          <ion-icon ios="ios-images-outline" name="images"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)='regions_page()'>
+          <ion-icon ios="ios-globe-outline" name="globe"></ion-icon>
+        </button>
+      </ion-buttons>
+      
+
+  </ion-toolbar>
+</ion-footer>
