@@ -1,11 +1,11 @@
 
 <ion-content padding class="back">
-  <ion-card class="centered">
+  <ion-card class="centered card card-3">
 
     <ion-card-header class="header">
     </ion-card-header>
   
-    <ion-card-content>
+    <ion-card-content >
       <ion-list>
         <ion-item>
           <ion-input type="email" placeholder="Емейл" clearInput [formControl]="emailFormControl" [(ngModel)]="usercreds.email"></ion-input>
@@ -20,7 +20,7 @@
       <div class="divider"></div>
       <button ion-button color="grey" (click)="login()" class="btn" outline block type="submit">Залогінитись</button>
       <div class="divider"></div>
-      <p class="header" style="padding-top: 5px;"><a (click)="signup()" style="color: red">Реєстрація</a> | <a (click)="reset()" style="color: red">Забув пароль</a></p>
+      <!--<p class="header" style="padding-top: 5px;"><a (click)="signup()" style="color: red">Реєстрація</a> | <a (click)="reset()" style="color: red">Забув пароль</a></p> -->
     </ion-card-content>
   
   </ion-card>
