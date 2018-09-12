@@ -8,6 +8,7 @@ import { NavController, App } from 'ionic-angular';
 import { ResetPage } from '../../pages/reset/reset'
 import { HomePage } from '../../pages/home/home'
 import { GrDashboardPage } from '../../pages/gr/gr-dashboard/gr-dashboard'
+import { GDashboardPage } from '../../pages/g/g-dashboard/g-dashboard'
 /*
   Generated class for the AuthProvider provider.
 
@@ -83,7 +84,7 @@ export class AuthProvider {
     var posada = snapShot.docs[0].data()['posada']
     console.log(posada)
     if (posada == 'Журналіст') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(GDashboardPage);
     }
     if (posada == 'Оперативний Редактор - Газета') {
       this.navCtrl.push(HomePage);
@@ -133,7 +134,7 @@ export class AuthProvider {
     var posada = snapShot.docs[0].data()['posada']
     console.log(posada)
     if (posada == 'Журналіст') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(GDashboardPage);
     }
     if (posada == 'Оперативний Редактор - Газета') {
       this.navCtrl.push(HomePage);
@@ -163,7 +164,7 @@ export class AuthProvider {
         var posada = snapShot.docs[0].data()['posada']
         console.log(posada)
         if (posada == 'Журналіст') {
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(GDashboardPage);
         }
         if (posada == 'Оперативний Редактор - Газета') {
           this.navCtrl.push(HomePage);

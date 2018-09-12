@@ -140,20 +140,25 @@ export class GrDashboardPage {
   create(){
     this.navCtrl.push(GrNewPage);
   }
+
   show(post){
     this.afs.doc('posts/'+post.id).update({read: true});
     this.navCtrl.push(GrShowPage,
         {param: post});
   }
+
   site(){
     this.navCtrl.push(GrSitePage);
   }
+
   lviv_page(){
     this.navCtrl.push(GrLvivPage);
   }
+
   regions_page(){
     this.navCtrl.push(GrRegionsPage);
   }
+  
   archieve_page(){
     this.navCtrl.push(GrArchievePage)
   }

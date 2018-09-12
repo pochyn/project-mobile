@@ -15,6 +15,9 @@ import { GrSitePage } from '../pages/gr/gr-site/gr-site';
 import { GrLvivPage } from '../pages/gr/gr-lviv/gr-lviv';
 import { GrRegionsPage } from '../pages/gr/gr-regions/gr-regions';
 import { GrArchievePage } from '../pages/gr/gr-archieve/gr-archieve';
+import { GDashboardPage } from '../pages/g/g-dashboard/g-dashboard';
+import { GNewPage} from '../pages/g/g-new/g-new';
+import { GArchievePage } from "../pages/g/g-archieve/g-archieve";
 
 import { AuthProvider } from '../providers/auth/auth';
 import { AuthguardProvider } from '../providers/authguard/authguard';
@@ -38,7 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     GrSitePage,
     GrLvivPage,
     GrRegionsPage,
-    GrArchievePage
+    GrArchievePage,
+    GDashboardPage,
+    GNewPage,
+    GArchievePage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,10 @@ import { HttpClientModule } from '@angular/common/http';
     GrSitePage,
     GrLvivPage,
     GrRegionsPage,
-    GrArchievePage
+    GrArchievePage,
+    GDashboardPage,
+    GNewPage,
+    GArchievePage
   ],
   providers: [
     StatusBar,
