@@ -5,6 +5,8 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { GNewPage } from '../g-new/g-new';
 import { GArchievePage}  from '../g-archieve/g-archieve';
+import { FormControl, Validators } from '@angular/forms';
+import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 
 /**
  * Generated class for the GDashboardPage page.
@@ -65,6 +67,9 @@ interface PostId extends Post {
 export class GDashboardPage {
   posts: any;
   media_posts: any;
+  postsColGaz: AngularFirestoreCollection<Post>;
+  postsColMed: AngularFirestoreCollection<Post>;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private afs: AngularFirestore) {
   }
@@ -95,30 +100,30 @@ export class GDashboardPage {
   }
 
   getMediaPosts(){
-    this.postsColGaz = this.afs.collection('posts');
-    this.posts = this.postsColGaz.snapshotChanges()
+    this.postsColMed = this.afs.collection('posts');
+    this.media_posts = this.postsColMed.snapshotChanges()
      .map(actions => {
        return actions.map(a => {
          const data = a.payload.doc.data() as Post;
          const id = a.payload.doc.id;
          return { id, data };
        });
-     }).map(posts => posts.filter(post => (post.data.read) && (post.data.checked_gazeta || post.data.checked_site || post.data.checked_lviv || post.data.checked_regions) && (post.data.mediaplan_gazeta || post.data.mediaplan_lviv || post.data.mediaplan_site || post.data.mediaplan_regions) && (!post.data.archieved_g)));
-     this.posts = this.posts
+     }).map(media_posts => media_posts.filter(media_posts => (media_posts.data.read) && (media_posts.data.checked_gazeta || media_posts.data.checked_site || media_posts.data.checked_lviv || media_posts.data.checked_regions) && (media_posts.data.mediaplan_gazeta || media_posts.data.mediaplan_lviv || media_posts.data.mediaplan_site || media_posts.data.mediaplan_regions) && (!media_posts.data.archieved_g)));
+     this.media_posts = this.media_posts
      .map((data) => {
          data.sort((a, b) => {
              return a.data.date > b.data.date ? -1 : 1;
           });
          return data;
       });
-      return this.posts
+      return this.media_posts
   }
 
   create(){
     this.navCtrl.push(GNewPage);
   }
 
-  site(){
+  /*site(){
     this.navCtrl.push(GrSitePage);
   }
   lviv_page(){
@@ -129,6 +134,6 @@ export class GDashboardPage {
   }
   archieve_page(){
     this.navCtrl.push(GrArchievePage)
-  }
+  }*/
 
 }
