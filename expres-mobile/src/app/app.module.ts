@@ -18,6 +18,13 @@ import { GrArchievePage } from '../pages/gr/gr-archieve/gr-archieve';
 import { GDashboardPage } from '../pages/g/g-dashboard/g-dashboard';
 import { GNewPage} from '../pages/g/g-new/g-new';
 import { GArchievePage } from "../pages/g/g-archieve/g-archieve";
+import { GApprovedPostsPage } from "../pages/g/g-approved-posts/g-approved-posts";
+import { GApprovedMediaplansPage } from "../pages/g/g-approved-mediaplans/g-approved-mediaplans";
+import { GNewMediaplanPage } from "../pages/g/g-new-mediaplan/g-new-mediaplan";
+import { GNewTopicPage } from "../pages/g/g-new-topic/g-new-topic";
+import { GNewOchnaPage } from "../pages/g/g-new-ochna/g-new-ochna";
+import { GShowPage } from "../pages/g/g-show/g-show";
+import { AllShowMediaPage } from "../pages/all-show-media/all-show-media"
 
 import { AuthProvider } from '../providers/auth/auth';
 import { AuthguardProvider } from '../providers/authguard/authguard';
@@ -44,7 +51,14 @@ import { HttpClientModule } from '@angular/common/http';
     GrArchievePage,
     GDashboardPage,
     GNewPage,
-    GArchievePage
+    GArchievePage,
+    GApprovedPostsPage,
+    GApprovedMediaplansPage,
+    GNewMediaplanPage,
+    GNewTopicPage,
+    GNewOchnaPage,
+    GShowPage,
+    AllShowMediaPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +83,14 @@ import { HttpClientModule } from '@angular/common/http';
     GrArchievePage,
     GDashboardPage,
     GNewPage,
-    GArchievePage
+    GArchievePage,
+    GApprovedPostsPage,
+    GApprovedMediaplansPage,
+    GNewTopicPage,
+    GNewMediaplanPage,
+    GNewOchnaPage,
+    GShowPage,
+    AllShowMediaPage
   ],
   providers: [
     StatusBar,

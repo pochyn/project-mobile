@@ -1,0 +1,59 @@
+<!--
+  Generated template for the GrShowPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Тема</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <div>
+        <button ion-button color="redish" (click)="archieve()" class="btn" outline block type="submit">Архівувати</button>
+    </div>
+    <ion-list>
+        <ion-item>
+            <font size="2" color="grey"><b>{{post?.data?.name}} - {{post?.data?.branch}}</b></font>
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey">Режим: {{type}}</font> 
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey">Дата створення: {{post?.data?.date}}</font> 
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey">Дата здачі: {{post?.data?.submitDate}}</font> 
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey">Лінк: </font> <font size="2" color="black"><a href="{{post?.data?.link}}" target="_blank">{{post?.data?.link}}</a> - {{post?.data?.sourceDate}} </font> 
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey">Першоджерело: {{post?.data?.source}} - {{post?.data?.sourceDate}}</font>  
+        </ion-item>
+
+        <ion-item>
+            <font size="2" color="grey"> Дедлайн: </font> <font size="2" color="#D53434">{{post?.data?.deadline}}</font>
+        </ion-item>
+
+        <ion-item text-wrap>
+            <font size="2" color="grey">Опис: {{post?.data?.content}} </font>
+        </ion-item>
+
+        <ion-item text-wrap>
+            <font size="2" color="grey">Зауваження: {{post?.data?.comments}}</font>
+        </ion-item>
+    </ion-list>
+
+  </ion-content>
+  
