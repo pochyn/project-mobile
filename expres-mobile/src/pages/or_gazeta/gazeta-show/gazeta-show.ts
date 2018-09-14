@@ -3,17 +3,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, sortedChanges } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { GNewPage } from '../g-new/g-new';
-import { GArchievePage}  from '../g-archieve/g-archieve';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { GApprovedMediaplansPage } from '../g-approved-mediaplans/g-approved-mediaplans'
-import { GApprovedPostsPage } from '../g-approved-posts/g-approved-posts'
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {MatDialog} from '@angular/material';
 import { AuthProvider } from '../../../providers/auth/auth';
-import { GDashboardPage}  from '../g-dashboard/g-dashboard';
 import * as moment from 'moment';
 
 /**
@@ -69,10 +64,11 @@ interface PostId extends Post {
 
 @IonicPage()
 @Component({
-  selector: 'page-g-show',
-  templateUrl: 'g-show.html',
+  selector: 'page-gazeta-show',
+  templateUrl: 'gazeta-show.html',
 })
-export class GShowPage {
+export class GazetaShowPage {
+
   postsCol: AngularFirestoreCollection<Post>;
   posts: any;
   regime: any;
@@ -149,7 +145,7 @@ export class GShowPage {
   }
 
   archieve(){
-    this.afs.doc('posts/'+this.post.id).update({archieved_g: true});
+    this.afs.doc('posts/'+this.post.id).update({archieved_or: true});
     this.navCtrl.pop()
   }
 
@@ -164,7 +160,7 @@ export class GShowPage {
   changePost(){
 
     if (this.comm != undefined &&  this.comm != ''){
-      this.afs.doc('posts/'+this.post.id).update({comments: this.data['comments'] + " (ЖУРНАЛІСТ): " +this.comm});
+      this.afs.doc('posts/'+this.post.id).update({comments: this.data['comments'] + " (ОПЕРАТИВНИЙ РЕДАКТОР): " +this.comm});
       var modified_dt = this.formatTodayDate();
       this.afs.doc('posts/'+this.post.id).update({date_modified: modified_dt});
     }

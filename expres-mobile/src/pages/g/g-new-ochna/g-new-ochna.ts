@@ -177,7 +177,7 @@ export class GNewOchnaPage {
     this.submitDate = undefined;
     this.comments = '';
     this.read = false;
-    this.gazeta_type = false;
+    this.gazeta_type = true;
     this.site_type = false;
     this.lviv_type = false;
     this.regions_type = false;

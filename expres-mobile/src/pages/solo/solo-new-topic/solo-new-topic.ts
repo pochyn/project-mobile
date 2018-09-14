@@ -251,9 +251,6 @@ newPost(){
   if (this.selected_types == "Регіональні") {
     this.regions_type = true;
   }
-  if (this.ochna) {
-    this.content = "(ОЧНА) " + this.content;
-  }
   var dt = this.formatTodayDate();
   var sbm_dt = this.formatSbmDate();
   var src_dt = this.formatSrcDate();

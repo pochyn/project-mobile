@@ -3,17 +3,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, sortedChanges } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { GNewPage } from '../g-new/g-new';
-import { GArchievePage}  from '../g-archieve/g-archieve';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { GApprovedMediaplansPage } from '../g-approved-mediaplans/g-approved-mediaplans'
-import { GApprovedPostsPage } from '../g-approved-posts/g-approved-posts'
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {MatDialog} from '@angular/material';
 import { AuthProvider } from '../../../providers/auth/auth';
-import { GDashboardPage}  from '../g-dashboard/g-dashboard';
 import * as moment from 'moment';
 
 
@@ -68,13 +63,13 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-
 @IonicPage()
 @Component({
-  selector: 'page-g-new-topic',
-  templateUrl: 'g-new-topic.html',
+  selector: 'page-gazeta-ochna',
+  templateUrl: 'gazeta-ochna.html',
 })
-export class GNewTopicPage {
+export class GazetaOchnaPage {
+
   postsCol: AngularFirestoreCollection<Post>;
   posts: any;
   regime: any;
@@ -122,7 +117,7 @@ export class GNewTopicPage {
   post: Observable<Post>;
 
   selected_types: any;
-  types = ['Загальні', 'Сайт', 'Львівські', 'Регіональні'];
+  types = ['Загальні', 'Сайт'];
   journ = [];
   users = {};
   new_id: any;
@@ -176,7 +171,7 @@ export class GNewTopicPage {
     this.submitDate = undefined;
     this.comments = '';
     this.read = false;
-    this.gazeta_type = false;
+    this.gazeta_type = true;
     this.site_type = false;
     this.lviv_type = false;
     this.regions_type = false;
@@ -242,21 +237,8 @@ export class GNewTopicPage {
 
 
 newPost(){
-  //get time
-  if (this.selected_types == "Загальні") {
-    this.gazeta_type = true;
-  }
-  if (this.selected_types == "Сайт") {
-    this.site_type = true;
-    this.checked = true;
-  }
-  if (this.selected_types == "Львівські") {
-    this.lviv_type = true;
-  }
-  if (this.selected_types == "Регіональні") {
-    this.regions_type = true;
-  }
-
+  this.gazeta_type = true;
+  this.content = "(ОЧНА) " + this.content;
   var dt = this.formatTodayDate();
   var sbm_dt = this.formatSbmDate();
   var src_dt = this.formatSrcDate();
@@ -311,5 +293,4 @@ newPost(){
       })
       this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
-
 }
