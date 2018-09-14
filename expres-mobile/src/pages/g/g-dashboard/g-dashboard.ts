@@ -7,8 +7,9 @@ import { GNewPage } from '../g-new/g-new';
 import { GArchievePage}  from '../g-archieve/g-archieve';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { GApprovedMediaplansPage } from '../g-approved-mediaplans/g-approved-mediaplans'
-import { GApprovedPostsPage } from '../g-approved-posts/g-approved-posts'
+import { GApprovedMediaplansPage } from '../g-approved-mediaplans/g-approved-mediaplans';
+import { GApprovedPostsPage } from '../g-approved-posts/g-approved-posts';
+import { HomePage } from '../../home/home';
 
 /**
  * Generated class for the GDashboardPage page.
@@ -52,5 +53,8 @@ export class GDashboardPage {
   archieve_page(){
     this.navCtrl.push(GrArchievePage)
   }*/
+  logout(){
+    this.navCtrl.push(HomePage);
+  }
 
 }
