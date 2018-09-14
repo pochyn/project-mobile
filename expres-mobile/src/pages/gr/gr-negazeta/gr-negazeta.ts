@@ -8,8 +8,8 @@ import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular
 import { GrShowPage } from '../gr-show/gr-show'
 import { GrNewPage } from '../gr-new/gr-new'
 import { GrDashboardPage } from '../gr-dashboard/gr-dashboard'
+import { GrSitePage } from '../gr-site/gr-site'
 import { GrLvivPage } from '../gr-lviv/gr-lviv'
-import { GrRegionsPage } from '../gr-regions/gr-regions'
 import { GrArchievePage } from '../gr-archieve/gr-archieve'
 
 /**
@@ -55,14 +55,20 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-//to get data from database
 
+/**
+ * Generated class for the GrRegionsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 @IonicPage()
 @Component({
-  selector: 'page-gr-site',
-  templateUrl: 'gr-site.html',
+  selector: 'page-gr-negazeta',
+  templateUrl: 'gr-negazeta.html',
 })
-export class GrSitePage {
+export class GrNegazetaPage {
+
   postsColGaz: AngularFirestoreCollection<Post>;
   postsColSite: AngularFirestoreCollection<Post>;
   postsColLviv: AngularFirestoreCollection<Post>;
@@ -91,8 +97,7 @@ export class GrSitePage {
   regionsData = new MatTableDataSource(this.regions);
   appData = new MatTableDataSource(this.app);
   
-
-
+  // what columns to diaplay
   constructor(public navCtrl: NavController, public navParams: NavParams, private afs: AngularFirestore) {
   }
 
@@ -105,7 +110,13 @@ export class GrSitePage {
          const id = a.payload.doc.id;
          return { id, data };
        });
-     }).map(posts => posts.filter(post => post.data.site_type && !post.data.archieved_gr));
-    console.log('ionViewDidLoad GrSitePage');
+     }).map(posts => posts.filter(post => post.data.regions_type && !post.data.archieved_gr));
   }
+
+
+  show(post){
+    this.navCtrl.push(GrShowPage,
+        {param: post});
+  }
+
 }

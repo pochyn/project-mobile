@@ -15,6 +15,15 @@ import { GrSitePage } from '../pages/gr/gr-site/gr-site';
 import { GrLvivPage } from '../pages/gr/gr-lviv/gr-lviv';
 import { GrRegionsPage } from '../pages/gr/gr-regions/gr-regions';
 import { GrArchievePage } from '../pages/gr/gr-archieve/gr-archieve';
+import { GrApprovedPostsPage } from '../pages/gr/gr-approved-posts/gr-approved-posts';
+import { GrNewPostsPage } from '../pages/gr/gr-new-posts/gr-new-posts';
+import {GrNegazetaPage} from '../pages/gr/gr-negazeta/gr-negazeta'
+import {GrNewGazetaPage} from '../pages/gr/gr-new-gazeta/gr-new-gazeta'
+import {GrNewLvivPage} from '../pages/gr/gr-new-lviv/gr-new-lviv'
+import {GrNewSitePage} from '../pages/gr/gr-new-site/gr-new-site'
+import {GrNewRegionsPage} from '../pages/gr/gr-new-regions/gr-new-regions'
+
+
 import { GDashboardPage } from '../pages/g/g-dashboard/g-dashboard';
 import { GNewPage} from '../pages/g/g-new/g-new';
 import { GArchievePage } from "../pages/g/g-archieve/g-archieve";
@@ -61,6 +70,7 @@ import { ENV } from '../environments/environment'
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -105,7 +115,14 @@ import { HttpClientModule } from '@angular/common/http';
     SiteDashboardPage,
     SiteNewPage,
     SiteTopicPage,
-    SiteShowPage
+    SiteShowPage,
+    GrNewPostsPage,
+    GrApprovedPostsPage,
+    GrNewRegionsPage,
+    GrNewGazetaPage,
+    GrNewLvivPage,
+    GrNewSitePage,
+    GrNegazetaPage
   ],
   imports: [
     BrowserModule,
@@ -159,7 +176,14 @@ import { HttpClientModule } from '@angular/common/http';
     SiteDashboardPage,
     SiteNewPage,
     SiteTopicPage,
-    SiteShowPage
+    SiteShowPage,
+    GrNewPostsPage,
+    GrApprovedPostsPage,
+    GrNewRegionsPage,
+    GrNewGazetaPage,
+    GrNewLvivPage,
+    GrNewSitePage,
+    GrNegazetaPage
   ],
   providers: [
     StatusBar,

@@ -1,57 +1,21 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title><p>Головний Редактор</p></ion-title>
+  <ion-navbar hideBackButton>
+    <ion-title><p>Журналіст </p></ion-title>
+    <button ion-button color="danger" class="logout" (click)='logout()' float-left>Вийти</button>
     <ion-buttons end>
       <button ion-button icon-only (click)='create()'>
         <ion-icon color="redish" name="add"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+
 </ion-header>
 
 
 <ion-content padding>
-    <ion-list>
-
-        <ion-list-header>Газета</ion-list-header>
-    
-        <ion-item  *ngFor="let post of posts | async" (click)='show(post)' [ngClass]="{'read': post.data.read, 'positive' : post.data.checked_gazeta == true}">
-          <ion-avatar item-start class="{{post.data.branch}}">     
-          </ion-avatar>
-          <h2>{{post.data.content}}</h2>
-          <p>{{post.data.name }} {{post.data.date}}</p>
-        </ion-item>
-    </ion-list>
-
+    <ion-tabs tabsPlacement="top">
+        <ion-tab [root]="tab1Root" tabTitle="Нові" ></ion-tab>
+        <ion-tab [root]="tab2Root" tabTitle="Затвердженні" ></ion-tab>
+      </ion-tabs>
 </ion-content>
-
-<ion-footer no-border>
-
-    <ion-toolbar color="redish">
-        
-        <ion-buttons start>
-          <button ion-button icon-only>
-            <ion-icon ios="ios-paper-outline" name="paper"></ion-icon>
-          </button>
-
-          <button ion-button icon-only (click)='site()'>
-            <ion-icon ios="ios-laptop-outline" name="laptop"></ion-icon>
-          </button>
-
-          <button ion-button icon-only (click)='archieve_page()'>
-            <ion-icon ios="ios-folder-open-outline" name="folder-open"></ion-icon>
-          </button>
-
-          <button ion-button icon-only (click)='lviv_page()'>
-            <ion-icon ios="ios-images-outline" name="images"></ion-icon>
-          </button>
-          <button ion-button icon-only (click)='regions_page()'>
-            <ion-icon ios="ios-globe-outline" name="globe"></ion-icon>
-          </button>
-        </ion-buttons>
-        
-
-    </ion-toolbar>
-  </ion-footer>

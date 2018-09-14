@@ -12,12 +12,6 @@ import { GrRegionsPage } from '../gr-regions/gr-regions'
 import { GrSitePage } from '../gr-site/gr-site'
 import { GrArchievePage } from '../gr-archieve/gr-archieve'
 
-
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/observable/merge';
-import 'rxjs/add/operator/map';
 /**
  * Generated class for the GrDashboardPage page.
  *
@@ -97,7 +91,6 @@ export class GrLvivPage {
   appData = new MatTableDataSource(this.app);
   
   // what columns to diaplay
-  displayedColumns = [ 'data.date', 'data.branch','data.name', 'data.content'];
   constructor(public navCtrl: NavController, public navParams: NavParams, private afs: AngularFirestore) {
   }
 
@@ -113,37 +106,4 @@ export class GrLvivPage {
      }).map(posts => posts.filter(post => post.data.lviv_type && !post.data.archieved_gr));
     console.log('ionViewDidLoad GrSitePage');
   }
-  doInfinite(infiniteScroll) {
-    console.log('Begin async operation');
-
-    setTimeout(() => {
-      for (let i = 0; i < 10; i++) {
-        this.posts.push( this.posts.length );
-      }
-
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
-  }
-  create(){
-    this.navCtrl.push(GrNewPage);
-  }
-  show(post){
-    this.afs.doc('posts/'+post.id).update({read: true});
-    this.navCtrl.push(GrShowPage,
-        {param: post});
-  }
-  gazeta(){
-    this.navCtrl.push(GrDashboardPage)
-  }
-  site(){
-    this.navCtrl.push(GrSitePage);
-  }
-  regions_page(){
-    this.navCtrl.push(GrRegionsPage);
-  }
-  archieve_page(){
-    this.navCtrl.push(GrArchievePage)
-  }
-
 }

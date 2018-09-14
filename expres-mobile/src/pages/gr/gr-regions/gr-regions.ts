@@ -11,12 +11,6 @@ import { GrDashboardPage } from '../gr-dashboard/gr-dashboard'
 import { GrSitePage } from '../gr-site/gr-site'
 import { GrLvivPage } from '../gr-lviv/gr-lviv'
 import { GrArchievePage } from '../gr-archieve/gr-archieve'
-
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/observable/merge';
-import 'rxjs/add/operator/map';
 /**
  * Generated class for the GrDashboardPage page.
  *
@@ -102,9 +96,7 @@ export class GrRegionsPage {
   lvivData = new MatTableDataSource(this.lviv);
   regionsData = new MatTableDataSource(this.regions);
   appData = new MatTableDataSource(this.app);
-  
-  // what columns to diaplay
-  displayedColumns = [ 'data.date', 'data.branch','data.name', 'data.content'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private afs: AngularFirestore) {
   }
 
@@ -119,37 +111,10 @@ export class GrRegionsPage {
        });
      }).map(posts => posts.filter(post => post.data.regions_type && !post.data.archieved_gr));
   }
-  doInfinite(infiniteScroll) {
-    console.log('Begin async operation');
 
-    setTimeout(() => {
-      for (let i = 0; i < 10; i++) {
-        this.posts.push( this.posts.length );
-      }
-
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
-  }
-  create(){
-    this.navCtrl.push(GrNewPage);
-  }
   show(post){
-    this.afs.doc('posts/'+post.id).update({read: true});
     this.navCtrl.push(GrShowPage,
         {param: post});
-  }
-  gazeta(){
-    this.navCtrl.push(GrDashboardPage)
-  }
-  lviv_page(){
-    this.navCtrl.push(GrLvivPage)
-  }
-  site(){
-    this.navCtrl.push(GrSitePage);
-  }
-  archieve_page(){
-    this.navCtrl.push(GrArchievePage)
   }
 
 }

@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
 
   <ion-navbar>
@@ -12,67 +13,54 @@
 
 </ion-header>
 
-
 <ion-content padding>
-    <div><font size="3" color="black"><b>{{post?.data?.name}} - {{post?.data?.branch}}</b></font></div>
-    <div class="divider"></div>
-    <div class="color-divider"></div>
-    <div class="divider"></div>
-    <div>
-        <font size="2" color="grey">Дата створення: {{post?.data?.date}}</font> 
-    </div>
-    <div>
-        <font size="2" color="grey">Можлива здача: </font> <font size="3" color="black"><a href="{{post?.data?.link}}" target="_blank">{{post?.data?.submitDate}}</a> </font>
-  </div>
-    <div>
-        <font size="2" color="grey">Першоджерело: {{post?.data?.source}} - {{post?.data?.sourceDate}}</font> 
-    </div>
-    <div>
-        <font size="2" color="grey">Лінк: </font> <font size="3" color="black"><a href="{{post?.data?.link}}" target="_blank">{{post?.data?.link}}</a> </font>
-      </div>
-    <div class="divider"></div>
-      <div>
-          <font size="4" color="red"> ДЕДЛАЙН: </font> <font size="4" color="black">{{post?.data?.deadline}}</font>
-      </div>
-    <div class="divider"></div>
-    <div class="color-divider"></div>
-    <div class="divider"></div>
-    <div>
-        <font size="2" color="grey">Опис </font><br>{{post?.data?.content}} 
-    </div>
-    <div class="divider"></div>
-    <div class="divider"></div>
-    <div>
-        <font size="2" color="grey">Зауваження</font> <br>{{post?.data?.comments}}
-    </div>
-    <ion-item-divider>
-    <ion-input clearInput [(ngModel)]="comm"></ion-input>
-    </ion-item-divider>
+<div>
+  <button ion-button color="redish" (click)="archieve()" class="btn" outline block type="submit">Архівувати</button>
+</div>
+<ion-list>
+  <ion-item>
+      <font size="2" color="grey"><b>{{post?.data?.name}} - {{post?.data?.branch}}</b></font>
+  </ion-item>
 
-        <ion-list>
-                <ion-item>
-                  <ion-label><font color="grey">Режим</font></ion-label>
-                  <ion-select [(ngModel)]="selected_types" name="type" multiple>
-                    <ion-option *ngFor="let type of types" [value]="type">{{type}}</ion-option>
-                  </ion-select>
-                </ion-item>
-        </ion-list>
+  <ion-item>
+      <font size="2" color="grey">Режим: {{type}}</font> 
+  </ion-item>
 
-        <ion-item>
-            <ion-label>Дедлайн</ion-label>
-            <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="deadln" name="deadln"></ion-datetime>
-          </ion-item>
-        
-          <ion-list>
-              <ion-item>
-                <ion-label><font color="grey">Журналіст</font></ion-label>
-                <ion-select [(ngModel)]="selected" name="journ">
-                  <ion-option *ngFor="let g of journ" [value]="g">{{g}}</ion-option>
-                </ion-select>
-              </ion-item>
-          </ion-list>
+  <ion-item>
+      <font size="2" color="grey">Дата створення: {{post?.data?.date}}</font> 
+  </ion-item>
 
-          <div>
-              <button ion-button color="redish" (click)="changePost()" class="btn" outline block type="submit">Змінити</button>
-          </div>
+  <ion-item>
+      <font size="2" color="grey">Дата здачі: {{post?.data?.submitDate}}</font> 
+  </ion-item>
+
+  <ion-item>
+      <font size="2" color="grey">Лінк: </font> <font size="2" color="black"><a href="{{post?.data?.link}}" target="_blank">{{post?.data?.link}}</a> - {{post?.data?.sourceDate}} </font> 
+  </ion-item>
+
+  <ion-item>
+      <font size="2" color="grey">Першоджерело: {{post?.data?.source}} - {{post?.data?.sourceDate}}</font>  
+  </ion-item>
+
+  <ion-item>
+      <font size="2" color="grey"> Дедлайн: </font> <font size="2" color="#D53434">{{post?.data?.deadline}}</font>
+  </ion-item>
+
+  <ion-item text-wrap>
+      <font size="2" color="grey">Опис: {{post?.data?.content}} </font>
+  </ion-item>
+
+  <ion-item text-wrap>
+      <font size="2" color="grey">Зауваження: {{post?.data?.comments}}</font>
+  </ion-item>
+
+  <ion-item>
+      <ion-input  clearInput  placeholder="Додати коментар" [(ngModel)]="comm" name="comm"></ion-input>
+  </ion-item>
+
+</ion-list>
+<div>
+  <button ion-button color="redish" (click)="changePost()" class="btn" outline block type="submit">Додати</button>
+</div>
+
 </ion-content>
