@@ -35,6 +35,15 @@ import { SoloNewOchnaPage } from "../pages/solo/solo-new-ochna/solo-new-ochna";
 import { SoloNewTopicPage } from "../pages/solo/solo-new-topic/solo-new-topic";
 import { SoloShowPage } from "../pages/solo/solo-show/solo-show";
 
+import { GazetaApprovedGazetaPage } from "../pages/or_gazeta/gazeta-approved-gazeta/gazeta-approved-gazeta"
+import { GazetaApprovedMediaplansPage } from "../pages/or_gazeta/gazeta-approved-mediaplans/gazeta-approved-mediaplans"
+import { GazetaApprovedSitePage } from "../pages/or_gazeta/gazeta-approved-site/gazeta-approved-site"
+import { GazetaDashboardPage } from "../pages/or_gazeta/gazeta-dashboard/gazeta-dashboard"
+import { GazetaNewPage } from "../pages/or_gazeta/gazeta-new/gazeta-new"
+import { GazetaOchnaPage } from "../pages/or_gazeta/gazeta-ochna/gazeta-ochna"
+import { GazetaShowPage } from "../pages/or_gazeta/gazeta-show/gazeta-show"
+import { GazetaTopicPage } from "../pages/or_gazeta/gazeta-topic/gazeta-topic"
+
 import { AuthProvider } from '../providers/auth/auth';
 import { AuthguardProvider } from '../providers/authguard/authguard';
 
@@ -75,7 +84,15 @@ import { HttpClientModule } from '@angular/common/http';
     SoloNewOchnaPage,
     SoloNewPage,
     SoloNewTopicPage,
-    SoloShowPage
+    SoloShowPage,
+    GazetaApprovedGazetaPage,
+    GazetaApprovedMediaplansPage,
+    GazetaApprovedSitePage,
+    GazetaDashboardPage,
+    GazetaNewPage,
+    GazetaOchnaPage,
+    GazetaShowPage,
+    GazetaTopicPage
   ],
   imports: [
     BrowserModule,
@@ -115,7 +132,15 @@ import { HttpClientModule } from '@angular/common/http';
     SoloNewOchnaPage,
     SoloNewPage,
     SoloNewTopicPage,
-    SoloShowPage
+    SoloShowPage,
+    GazetaApprovedGazetaPage,
+    GazetaApprovedMediaplansPage,
+    GazetaApprovedSitePage,
+    GazetaDashboardPage,
+    GazetaNewPage,
+    GazetaOchnaPage,
+    GazetaShowPage,
+    GazetaTopicPage
   ],
   providers: [
     StatusBar,

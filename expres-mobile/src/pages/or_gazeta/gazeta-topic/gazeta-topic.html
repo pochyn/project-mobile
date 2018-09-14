@@ -1,0 +1,48 @@
+<!--
+  Generated template for the GNewTopicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+
+  <ion-list>            
+      <ion-item>
+        <ion-input clearInput  placeholder="Першоджерело" type="text" [formControl]="sourceControl" [(ngModel)]="source" name="source" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input clearInput  placeholder="Лінк" [(ngModel)]="link" name="link"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label><font color="#999999">Дата в джерелі</font></ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [formControl]="dateControl" [(ngModel)]="sourceDate" name="sourceDate"  required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+              <ion-label><font color="#999999">Дата здачі</font></ion-label>
+              <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="submitDate" name="submitDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <textarea #myInput id="myInput" rows="1" maxLength="1000" (keyup)="resize()" [formControl]="contentControl" [(ngModel)]="content" name="content" maxLength="1000" placeholder="Опис" required></textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+          <ion-label><font color="#999999">Куди</font></ion-label>
+          <ion-select placeholder="Режим" required [(ngModel)]="selected_types" [formControl]="typeControl">
+          <ion-option *ngFor="let type of types" [value]="type">{{type}}</ion-option>
+          </ion-select>
+      </ion-item>
+    </ion-list>
+
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar color="redish" class="bottom">   
+        <button ion-button color="redish" full type="submit" [disabled]="dateControl.hasError('required') || contentControl.hasError('required') || sourceControl.hasError('required') || typeControl.hasError('required')" (click)="newPost()">Додати тему</button>
+    </ion-toolbar>
+</ion-footer>
