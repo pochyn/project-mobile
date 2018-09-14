@@ -41,18 +41,6 @@ export class GDashboardPage {
     this.navCtrl.push(GNewPage);
   }
 
-  /*site(){
-    this.navCtrl.push(GrSitePage);
-  }
-  lviv_page(){
-    this.navCtrl.push(GrLvivPage);
-  }
-  regions_page(){
-    this.navCtrl.push(GrRegionsPage);
-  }
-  archieve_page(){
-    this.navCtrl.push(GrArchievePage)
-  }*/
   logout(){
     this.navCtrl.push(HomePage);
   }

@@ -10,6 +10,8 @@ import { HomePage } from '../../pages/home/home'
 import { GrDashboardPage } from '../../pages/gr/gr-dashboard/gr-dashboard'
 import { GDashboardPage } from '../../pages/g/g-dashboard/g-dashboard'
 import { SoloDashboardPage } from '../../pages/solo/solo-dashboard/solo-dashboard'
+import { SiteDashboardPage } from '../../pages/or-site/site-dashboard/site-dashboard'
+import { GazetaDashboardPage } from '../../pages/or_gazeta/gazeta-dashboard/gazeta-dashboard'
 /*
   Generated class for the AuthProvider provider.
 
@@ -88,10 +90,10 @@ export class AuthProvider {
       this.navCtrl.push(GDashboardPage);
     }
     if (posada == 'Оперативний Редактор - Газета') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(GazetaDashboardPage);
     }
     if (posada == 'Оперативний редактор - Сайт') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(SiteDashboardPage);
     }
     if (posada == 'Керівник відділу') {
       this.navCtrl.push(HomePage);
@@ -141,10 +143,10 @@ export class AuthProvider {
       this.navCtrl.push(GDashboardPage);
     }
     if (posada == 'Оперативний Редактор - Газета') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(GazetaDashboardPage);
     }
     if (posada == 'Оперативний редактор - Сайт') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(SiteDashboardPage);
     }
     if (posada == 'Керівник відділу') {
       this.navCtrl.push(HomePage);
@@ -174,10 +176,10 @@ export class AuthProvider {
           this.navCtrl.push(GDashboardPage);
         }
         if (posada == 'Оперативний Редактор - Газета') {
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(GazetaDashboardPage);
         }
         if (posada == 'Оперативний редактор - Сайт') {
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(SiteDashboardPage);
         }
         if (posada == 'Керівник відділу') {
           this.navCtrl.push(HomePage);

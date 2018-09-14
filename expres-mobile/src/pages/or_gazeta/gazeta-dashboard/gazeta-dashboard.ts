@@ -11,6 +11,8 @@ import { GazetaApprovedMediaplansPage } from '../gazeta-approved-mediaplans/gaze
 import { GazetaApprovedSitePage } from '../gazeta-approved-site/gazeta-approved-site'
 import { GazetaNewPage } from '../gazeta-new/gazeta-new'
 
+import { HomePage } from '../../home/home';
+
 
 /**
  * Generated class for the GDashboardPage page.
@@ -29,7 +31,7 @@ export class GazetaDashboardPage {
 
   tab1Root = GazetaApprovedGazetaPage;
   tab2Root = GazetaApprovedMediaplansPage;
-  tab3Root = GazetaApprovedMediaplansPage;
+  tab3Root = GazetaApprovedSitePage;
 
   constructor(public navCtrl: NavController) {
   }
@@ -40,5 +42,9 @@ export class GazetaDashboardPage {
 
   create(){
     this.navCtrl.push(GazetaNewPage);
+  }
+
+  logout(){
+    this.navCtrl.push(HomePage);
   }
 }

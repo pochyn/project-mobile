@@ -44,6 +44,13 @@ import { GazetaOchnaPage } from "../pages/or_gazeta/gazeta-ochna/gazeta-ochna"
 import { GazetaShowPage } from "../pages/or_gazeta/gazeta-show/gazeta-show"
 import { GazetaTopicPage } from "../pages/or_gazeta/gazeta-topic/gazeta-topic"
 
+import { SiteApprovovedMediaplansPage } from "../pages/or-site/site-approvoved-mediaplans/site-approvoved-mediaplans"
+import { SiteApprovovedSitePage } from "../pages/or-site/site-approvoved-site/site-approvoved-site"
+import { SiteDashboardPage } from "../pages/or-site/site-dashboard/site-dashboard"
+import { SiteNewPage } from "../pages/or-site/site-new/site-new"
+import { SiteTopicPage } from "../pages/or-site/site-topic/site-topic"
+import { SiteShowPage } from "../pages/or-site/site-show/site-show"
+
 import { AuthProvider } from '../providers/auth/auth';
 import { AuthguardProvider } from '../providers/authguard/authguard';
 
@@ -92,7 +99,13 @@ import { HttpClientModule } from '@angular/common/http';
     GazetaNewPage,
     GazetaOchnaPage,
     GazetaShowPage,
-    GazetaTopicPage
+    GazetaTopicPage,
+    SiteApprovovedMediaplansPage,
+    SiteApprovovedSitePage,
+    SiteDashboardPage,
+    SiteNewPage,
+    SiteTopicPage,
+    SiteShowPage
   ],
   imports: [
     BrowserModule,
@@ -140,7 +153,13 @@ import { HttpClientModule } from '@angular/common/http';
     GazetaNewPage,
     GazetaOchnaPage,
     GazetaShowPage,
-    GazetaTopicPage
+    GazetaTopicPage,
+    SiteApprovovedMediaplansPage,
+    SiteApprovovedSitePage,
+    SiteDashboardPage,
+    SiteNewPage,
+    SiteTopicPage,
+    SiteShowPage
   ],
   providers: [
     StatusBar,

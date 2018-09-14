@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { SoloApprovedMediaplansPage } from '../solo-approved-mediaplans/solo-approved-mediaplans'
 import { SoloApprovedPostsPage } from '../solo-approved-posts/solo-approved-posts'
-
+import { HomePage } from '../../home/home';
 /**
  * Generated class for the GDashboardPage page.
  *
@@ -36,6 +36,10 @@ export class SoloDashboardPage {
 
   create(){
     this.navCtrl.push(SoloNewPage);
+  }
+
+  logout(){
+    this.navCtrl.push(HomePage);
   }
 
 }
