@@ -3,21 +3,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, sortedChanges } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { GNewPage } from '../g-new/g-new';
-import { GArchievePage}  from '../g-archieve/g-archieve';
+import { SoloNewPage } from '../solo-new/solo-new';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { GShowPage } from '../g-show/g-show'
+import { SoloShowPage } from '../solo-show/solo-show'
 import { AllShowMediaPage } from '../../all-show-media/all-show-media'
 
-/**
- * Generated class for the GDashboardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
- // post inteface
+// post inteface
 interface Post {
   author: string;
   name: string;
@@ -61,18 +54,19 @@ interface PostId extends Post {
   id: string; 
 }
 
+
 @IonicPage()
 @Component({
-  selector: 'page-g-approved-mediaplans',
-  templateUrl: 'g-approved-mediaplans.html',
+  selector: 'page-solo-approved-mediaplans',
+  templateUrl: 'solo-approved-mediaplans.html',
 })
-export class GApprovedMediaplansPage {
+export class SoloApprovedMediaplansPage {
 
   posts: any;
   media_posts: any;
   postsColGaz: AngularFirestoreCollection<Post>;
   postsColMed: AngularFirestoreCollection<Post>;
-  tab2Root = GNewPage;
+  tab2Root = SoloNewPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private afs: AngularFirestore) {
   }
@@ -103,7 +97,7 @@ export class GApprovedMediaplansPage {
   }
 
   create(){
-    this.navCtrl.push(GNewPage);
+    this.navCtrl.push(SoloNewPage);
   }
   show(post){
     this.navCtrl.push(AllShowMediaPage,

@@ -3,14 +3,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, sortedChanges } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { GNewPage } from '../g-new/g-new';
-import { GArchievePage}  from '../g-archieve/g-archieve';
+import { SoloNewPage } from '../solo-new/solo-new';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { GShowPage } from '../g-show/g-show';
+import { SoloShowPage } from '../solo-show/solo-show';
 import { IonicApp } from 'ionic-angular/index';
 import { AuthProvider } from '../../../providers/auth/auth';
-
 /**
  * Generated class for the GDashboardPage page.
  *
@@ -62,21 +60,20 @@ interface PostId extends Post {
   id: string; 
 }
 
-
 @IonicPage()
 @Component({
-  selector: 'page-g-approved-posts',
-  templateUrl: 'g-approved-posts.html',
+  selector: 'page-solo-approved-posts',
+  templateUrl: 'solo-approved-posts.html',
 })
-export class GApprovedPostsPage {
+export class SoloApprovedPostsPage {
 
   posts: any;
   media_posts: any;
   postsColGaz: AngularFirestoreCollection<Post>;
   postsColMed: AngularFirestoreCollection<Post>;
-  tab1Root = GArchievePage;
-  tab2Root = GNewPage;
+  tab2Root = SoloNewPage;
   post_type: any;
+
   nascriznyy = false;
   nascr_name = '';
   private auth: AuthProvider;
@@ -129,10 +126,10 @@ export class GApprovedPostsPage {
   }
   
   create(){
-    this.navCtrl.push(GNewPage);
+    this.navCtrl.push(SoloNewPage);
   }
   show(post){
-    this.navCtrl.push(GShowPage,
+    this.navCtrl.push(SoloShowPage,
         {param: post});
   }
   

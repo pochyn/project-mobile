@@ -26,6 +26,15 @@ import { GNewOchnaPage } from "../pages/g/g-new-ochna/g-new-ochna";
 import { GShowPage } from "../pages/g/g-show/g-show";
 import { AllShowMediaPage } from "../pages/all-show-media/all-show-media"
 
+import { SoloApprovedMediaplansPage } from "../pages/solo/solo-approved-mediaplans/solo-approved-mediaplans";
+import { SoloApprovedPostsPage } from "../pages/solo/solo-approved-posts/solo-approved-posts";
+import { SoloDashboardPage } from "../pages/solo/solo-dashboard/solo-dashboard";
+import { SoloNewPage } from "../pages/solo/solo-new/solo-new";
+import { SoloNewMediaplanPage } from "../pages/solo/solo-new-mediaplan/solo-new-mediaplan";
+import { SoloNewOchnaPage } from "../pages/solo/solo-new-ochna/solo-new-ochna";
+import { SoloNewTopicPage } from "../pages/solo/solo-new-topic/solo-new-topic";
+import { SoloShowPage } from "../pages/solo/solo-show/solo-show";
+
 import { AuthProvider } from '../providers/auth/auth';
 import { AuthguardProvider } from '../providers/authguard/authguard';
 
@@ -58,7 +67,15 @@ import { HttpClientModule } from '@angular/common/http';
     GNewTopicPage,
     GNewOchnaPage,
     GShowPage,
-    AllShowMediaPage
+    AllShowMediaPage,
+    SoloApprovedMediaplansPage,
+    SoloApprovedPostsPage,
+    SoloDashboardPage,
+    SoloNewMediaplanPage,
+    SoloNewOchnaPage,
+    SoloNewPage,
+    SoloNewTopicPage,
+    SoloShowPage
   ],
   imports: [
     BrowserModule,
@@ -90,7 +107,15 @@ import { HttpClientModule } from '@angular/common/http';
     GNewMediaplanPage,
     GNewOchnaPage,
     GShowPage,
-    AllShowMediaPage
+    AllShowMediaPage,
+    SoloApprovedMediaplansPage,
+    SoloApprovedPostsPage,
+    SoloDashboardPage,
+    SoloNewMediaplanPage,
+    SoloNewOchnaPage,
+    SoloNewPage,
+    SoloNewTopicPage,
+    SoloShowPage
   ],
   providers: [
     StatusBar,

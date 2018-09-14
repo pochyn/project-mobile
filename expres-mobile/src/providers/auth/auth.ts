@@ -9,6 +9,7 @@ import { ResetPage } from '../../pages/reset/reset'
 import { HomePage } from '../../pages/home/home'
 import { GrDashboardPage } from '../../pages/gr/gr-dashboard/gr-dashboard'
 import { GDashboardPage } from '../../pages/g/g-dashboard/g-dashboard'
+import { SoloDashboardPage } from '../../pages/solo/solo-dashboard/solo-dashboard'
 /*
   Generated class for the AuthProvider provider.
 
@@ -98,6 +99,9 @@ export class AuthProvider {
     if (posada == 'Головний редактор') {
       this.navCtrl.push(GrDashboardPage);
     }
+    if (posada == 'Самостійний') {
+      this.navCtrl.push(SoloDashboardPage);
+    }
   })
   }
 
@@ -148,6 +152,9 @@ export class AuthProvider {
     if (posada == 'Головний редактор') {
       this.navCtrl.push(GrDashboardPage);
     }
+    if (posada == 'Самостійний') {
+      this.navCtrl.push(SoloDashboardPage);
+    }
   })
   }
 
@@ -177,6 +184,9 @@ export class AuthProvider {
         }
         if (posada == 'Головний редактор') {
           this.navCtrl.push(GrDashboardPage);
+        }
+        if (posada == 'Самостійний') {
+          this.navCtrl.push(SoloDashboardPage);
         }
       })
       })
