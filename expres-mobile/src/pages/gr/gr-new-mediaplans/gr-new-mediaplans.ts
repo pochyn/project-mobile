@@ -61,13 +61,12 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-
 @IonicPage()
 @Component({
-  selector: 'page-gr-new-lviv',
-  templateUrl: 'gr-new-lviv.html',
+  selector: 'page-gr-new-mediaplans',
+  templateUrl: 'gr-new-mediaplans.html',
 })
-export class GrNewLvivPage {
+export class GrNewMediaplansPage {
 
   postsColGaz: AngularFirestoreCollection<Post>;
   postsColSite: AngularFirestoreCollection<Post>;
@@ -109,31 +108,16 @@ export class GrNewLvivPage {
   ionViewDidLoad() {
     this.posts = this.getPosts();
   }
-  showCheckbox(id) {
+  showCheckbox(post) {
     let alert = this.alertCtrl.create();
     alert.setTitle('Затвердити');
 
     alert.addInput({
       type: 'checkbox',
-      label: 'Загальні',
-      value: 'Загальні'
+      label: 'Затвердити',
+      value: 'Затвердити'
     });
 
-    alert.addInput({
-      type: 'checkbox',
-      label: 'Сайт',
-      value: 'Сайт'
-    });
-    alert.addInput({
-      type: 'checkbox',
-      label: 'Львівські',
-      value: 'Львівські'
-    });
-    alert.addInput({
-      type: 'checkbox',
-      label: 'Регіональні',
-      value: 'Регіональні'
-    });
     alert.addInput({
       type: 'checkbox',
       label: 'Прочитанно',
@@ -147,35 +131,30 @@ export class GrNewLvivPage {
         console.log('Checkbox data:', data);
         this.testCheckboxOpen = false;
         this.testCheckboxResult = data;
-        this.approve(id);
+        this.approve(post);
       }
     });
     alert.present();
   }
-  approve(id){
-
-    if (this.testCheckboxResult.indexOf("Загальні") > -1){
-      this.afs.doc('posts/'+id).update({read: true});
-      this.afs.doc('posts/'+id).update({checked_gazeta: true});
-      this.afs.doc('posts/'+id).update({gazeta_type: true});
-    }
-
-    if (this.testCheckboxResult.indexOf("Львівські") > -1) { 
-      this.afs.doc('posts/'+id).update({read: true});
-      this.afs.doc('posts/'+id).update({checked_lviv: true});
-      this.afs.doc('posts/'+id).update({lviv_type: true});
-    }
-
-    if (this.testCheckboxResult.indexOf("Регіональні") > -1) { 
-      this.afs.doc('posts/'+id).update({read: true});
-      this.afs.doc('posts/'+id).update({checked_regions: true});
-      this.afs.doc('posts/'+id).update({regions_type: true});
-    }
-
-    if (this.testCheckboxResult.indexOf("Сайт") > -1) { 
-      this.afs.doc('posts/'+id).update({read: true});
-      this.afs.doc('posts/'+id).update({checked_site: true});
-      this.afs.doc('posts/'+id).update({site_type: true});
+  approve(post){
+    var id = post.id
+    if (this.testCheckboxResult.indexOf("Затвердити") > -1){
+      if (post.data.mediaplan_gazeta) {
+        this.afs.doc('posts/'+id).update({read: true});
+        this.afs.doc('posts/'+id).update({checked_gazeta: true});
+      }
+      if (post.data.mediaplan_lviv) {
+        this.afs.doc('posts/'+id).update({read: true});
+        this.afs.doc('posts/'+id).update({checked_lviv: true});
+      }
+      if (post.data.mediaplan_regions) {
+        this.afs.doc('posts/'+id).update({read: true});
+        this.afs.doc('posts/'+id).update({checked_regions: true});
+      }
+      if (post.data.mediaplan_site) {
+        this.afs.doc('posts/'+id).update({read: true});
+        this.afs.doc('posts/'+id).update({checked_site: true});
+      }
     }
 
     if (this.testCheckboxResult.indexOf("Прочитанно") > -1) { 
@@ -209,7 +188,7 @@ export class GrNewLvivPage {
           const id = a.payload.doc.id;
           return { id, data };
         });
-      }).map(posts => posts.filter(post => post.data.checked && post.data.lviv_type && !post.data.read && !post.data.archieved_gr&& !(post.data.mediaplan_gazeta || post.data.mediaplan_lviv || post.data.mediaplan_regions || post.data.mediaplan_site)));
+      }).map(posts => posts.filter(post => (!post.data.read) && (post.data.mediaplan_gazeta || post.data.mediaplan_lviv  || post.data.mediaplan_regions || post.data.mediaplan_site) && (!post.data.archieved_gr)));
       this.posts = this.posts
       .map((data) => {
           data.sort((a, b) => {

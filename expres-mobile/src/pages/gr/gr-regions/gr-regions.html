@@ -1,14 +1,16 @@
 <ion-content padding>
 
-  <ion-card *ngFor="let post of posts | async">
-
-    <ion-card-header>
-      {{post.data.date}}
-    </ion-card-header>
-  
-    <ion-card-content>
-      {{post.data.content}}
-    </ion-card-content>
-  
-  </ion-card>
-</ion-content>
+        <ion-card *ngFor="let post of posts | async">
+      
+          <ion-card-header>
+              <button ion-button icon-only outline  class="btnOpen" (click)="show(post)" ><ion-icon name="arrow-up"></ion-icon></button>
+      
+              <font size="2"> {{post.data.date}} - {{post.data.name}} </font>
+          </ion-card-header>
+        
+          <ion-card-content>
+              <div id=div-{{post.id}}>{{post.data.content | slice:0:80}}</div> 
+              <button ion-button round outline  style="margin-left: 2%;" id=button-{{post.id}} class="btnShow" (click)="showMore(post);">(більше)</button>
+            </ion-card-content>
+        </ion-card>
+      </ion-content>

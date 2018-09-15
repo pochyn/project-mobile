@@ -22,6 +22,8 @@ import {GrNewGazetaPage} from '../pages/gr/gr-new-gazeta/gr-new-gazeta'
 import {GrNewLvivPage} from '../pages/gr/gr-new-lviv/gr-new-lviv'
 import {GrNewSitePage} from '../pages/gr/gr-new-site/gr-new-site'
 import {GrNewRegionsPage} from '../pages/gr/gr-new-regions/gr-new-regions'
+import {GrApprovedMediaplansPage} from '../pages/gr/gr-approved-mediaplans/gr-approved-mediaplans'
+import {GrNewMediaplansPage} from '../pages/gr/gr-new-mediaplans/gr-new-mediaplans'
 
 
 import { GDashboardPage } from '../pages/g/g-dashboard/g-dashboard';
@@ -122,7 +124,9 @@ import { HttpClientModule } from '@angular/common/http';
     GrNewGazetaPage,
     GrNewLvivPage,
     GrNewSitePage,
-    GrNegazetaPage
+    GrNegazetaPage,
+    GrApprovedMediaplansPage,
+    GrNewMediaplansPage
   ],
   imports: [
     BrowserModule,
@@ -183,7 +187,9 @@ import { HttpClientModule } from '@angular/common/http';
     GrNewGazetaPage,
     GrNewLvivPage,
     GrNewSitePage,
-    GrNegazetaPage
+    GrNegazetaPage,
+    GrApprovedMediaplansPage,
+    GrNewMediaplansPage
   ],
   providers: [
     StatusBar,

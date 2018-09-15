@@ -6,6 +6,7 @@ import {GrNewGazetaPage} from '../gr-new-gazeta/gr-new-gazeta'
 import {GrNewLvivPage} from '../gr-new-lviv/gr-new-lviv'
 import {GrNewRegionsPage}from '../gr-new-regions/gr-new-regions'
 import {GrNewSitePage} from '../gr-new-site/gr-new-site'
+import {GrNewMediaplansPage} from '../gr-new-mediaplans/gr-new-mediaplans'
 /**
  * Generated class for the GrNewPostsPage page.
  *
@@ -23,6 +24,7 @@ export class GrNewPostsPage {
   tab2Root = GrNewSitePage;
   tab3Root = GrNewLvivPage;
   tab4Root = GrNewRegionsPage;
+  tab5Root = GrNewMediaplansPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -113,8 +113,6 @@ export class GrNegazetaPage {
 
   ionViewDidLoad() {
     this.posts = this.getPosts();
-    this.limit = 40;
-    this.truncating = true;
   }
 
   getPosts(){
@@ -142,7 +140,7 @@ export class GrNegazetaPage {
           const id = a.payload.doc.id;
           return { id, data };
         });
-      }).map(posts => posts.filter(post => post.data.checked && post.data.gazeta_type && post.data.checked_gazeta && !post.data.archieved_gr&& !(post.data.mediaplan_gazeta || post.data.mediaplan_lviv || post.data.mediaplan_regions || post.data.mediaplan_site)));
+      }).map(posts => posts.filter(post => post.data.checked && post.data.gazeta_type && post.data.checked_gazeta && !post.data.archieved_gr&& !(post.data.mediaplan_gazeta || post.data.mediaplan_lviv || post.data.mediaplan_regions || post.data.mediaplan_site)));       
       this.posts = this.posts
       .map((data) => {
           data.sort((a, b) => {
@@ -170,14 +168,14 @@ export class GrNegazetaPage {
     var divElement = document.getElementById(divId);
 
 
-    if(buttonElement.textContent == "show more"){
+    if(buttonElement.textContent == "(більше)"){
       console.log(this.condition_checker);
-      buttonElement.textContent = "show less";
+      buttonElement.textContent = "(менше)";
       divElement.textContent = post.data.content;
     }else{
       var contentData = post.data.content;
-      divElement.textContent = contentData.slice(0, 40);
-      buttonElement.textContent = "show more";
+      divElement.textContent = contentData.slice(0, 80);
+      buttonElement.textContent = "(більше)";
     }
     
   }

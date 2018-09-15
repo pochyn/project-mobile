@@ -6,6 +6,7 @@ import {GrLvivPage} from '../gr-lviv/gr-lviv'
 import {GrRegionsPage} from '../gr-regions/gr-regions'
 import {GrSitePage}from '../gr-site/gr-site'
 import {GrNegazetaPage} from '../gr-negazeta/gr-negazeta'
+import {GrApprovedMediaplansPage} from '../gr-approved-mediaplans/gr-approved-mediaplans'
 
 /**
  * Generated class for the GrApprovedPostsPage page.
@@ -24,6 +25,7 @@ export class GrApprovedPostsPage {
   tab2Root = GrSitePage;
   tab3Root = GrLvivPage;
   tab4Root = GrRegionsPage;
+  tab5Root = GrApprovedMediaplansPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
