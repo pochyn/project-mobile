@@ -6,8 +6,21 @@
       {{post.data.date}}
     </ion-card-header>
   
-    <ion-card-content>
+    <!--<ion-card-content>
+      <div *ngIf="post.data.content"> </div>
+      <div *ngIf="post.data.content.length <= limit">{{post.data.content}}</div>
+      <div *ngIf="truncating && post.data.content.length > limit" id="1">
+        {{post.data.content | slice:0:40}}
+        <button ion-button (click)="truncating = false; showMore(post);">show more</button>
+      </div>
+      <div *ngIf="!truncating && post.data.content.length > limit">
       {{post.data.content}}
+      <button ion-button (click)="truncating = true; showLess(post);">show less</button>
+    </div>
+    </ion-card-content> -->
+    <ion-card-content>
+        <div id=div-{{post.id}}>{{post.data.content | slice:0:40}}</div>
+        <button  id=button-{{post.id}} ion-button (click)="showMore(post);">show more</button>
     </ion-card-content>
   
   </ion-card>

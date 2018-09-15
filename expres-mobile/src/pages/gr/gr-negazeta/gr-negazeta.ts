@@ -10,6 +10,7 @@ import { MatSnackBar, MatPaginator, MatTableDataSource, MatSort } from '@angular
 import { GrShowPage } from '../gr-show/gr-show';
 import { IonicApp } from 'ionic-angular/index';
 import { AuthProvider } from '../../../providers/auth/auth';
+import { Pipe, PipeTransform } from '@angular/core';
 
 /**
  * Generated class for the GrDashboardPage page.
@@ -85,6 +86,7 @@ export class GrNegazetaPage {
   // needed to show post data
   content:string;
   author: string;
+  condition_checker: any;
   
   //all posts of neede type
   
@@ -111,6 +113,8 @@ export class GrNegazetaPage {
 
   ionViewDidLoad() {
     this.posts = this.getPosts();
+    this.limit = 40;
+    this.truncating = true;
   }
 
   getPosts(){
@@ -158,4 +162,23 @@ export class GrNegazetaPage {
         {param: post});
   }
 
+
+  showMore(post){
+    var buttonId = "button-" + post.id;
+    var buttonElement = document.getElementById(buttonId);
+    var divId = "div-" + post.id;
+    var divElement = document.getElementById(divId);
+
+
+    if(buttonElement.textContent == "show more"){
+      console.log(this.condition_checker);
+      buttonElement.textContent = "show less";
+      divElement.textContent = post.data.content;
+    }else{
+      var contentData = post.data.content;
+      divElement.textContent = contentData.slice(0, 40);
+      buttonElement.textContent = "show more";
+    }
+    
+  }
 }
