@@ -24,6 +24,8 @@ import {GrNewSitePage} from '../pages/gr/gr-new-site/gr-new-site'
 import {GrNewRegionsPage} from '../pages/gr/gr-new-regions/gr-new-regions'
 import {GrApprovedMediaplansPage} from '../pages/gr/gr-approved-mediaplans/gr-approved-mediaplans'
 import {GrNewMediaplansPage} from '../pages/gr/gr-new-mediaplans/gr-new-mediaplans'
+import {GrCreateMediaPage} from '../pages/gr/gr-create-media/gr-create-media'
+import {GrCreatePostPage} from '../pages/gr/gr-create-post/gr-create-post'
 
 
 import { GDashboardPage } from '../pages/g/g-dashboard/g-dashboard';
@@ -126,7 +128,9 @@ import { HttpClientModule } from '@angular/common/http';
     GrNewSitePage,
     GrNegazetaPage,
     GrApprovedMediaplansPage,
-    GrNewMediaplansPage
+    GrNewMediaplansPage,
+    GrCreateMediaPage,
+    GrCreatePostPage
   ],
   imports: [
     BrowserModule,
@@ -189,7 +193,9 @@ import { HttpClientModule } from '@angular/common/http';
     GrNewSitePage,
     GrNegazetaPage,
     GrApprovedMediaplansPage,
-    GrNewMediaplansPage
+    GrNewMediaplansPage,
+    GrCreateMediaPage,
+    GrCreatePostPage
   ],
   providers: [
     StatusBar,
