@@ -62,7 +62,7 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
+
 @Component({
   selector: 'page-gr-new-lviv',
   templateUrl: 'gr-new-lviv.html',

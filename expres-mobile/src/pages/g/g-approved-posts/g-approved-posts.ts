@@ -63,7 +63,7 @@ interface PostId extends Post {
 }
 
 
-@IonicPage()
+
 @Component({
   selector: 'page-g-approved-posts',
   templateUrl: 'g-approved-posts.html',

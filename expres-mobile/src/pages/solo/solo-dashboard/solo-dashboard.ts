@@ -18,7 +18,7 @@ import { HomePage } from '../../home/home';
 
  // post inteface
 
-@IonicPage()
+
 @Component({
   selector: 'page-solo-dashboard',
   templateUrl: 'solo-dashboard.html',

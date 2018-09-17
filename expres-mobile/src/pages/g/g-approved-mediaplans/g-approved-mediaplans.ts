@@ -61,7 +61,7 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
+
 @Component({
   selector: 'page-g-approved-mediaplans',
   templateUrl: 'g-approved-mediaplans.html',

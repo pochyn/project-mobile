@@ -55,7 +55,6 @@ interface PostId extends Post {
 }
 
 
-@IonicPage()
 @Component({
   selector: 'page-solo-approved-mediaplans',
   templateUrl: 'solo-approved-mediaplans.html',

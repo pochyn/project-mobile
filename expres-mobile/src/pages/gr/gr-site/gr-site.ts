@@ -63,7 +63,6 @@ interface PostId extends Post {
 }
 //to get data from database
 
-@IonicPage()
 @Component({
   selector: 'page-gr-site',
   templateUrl: 'gr-site.html',

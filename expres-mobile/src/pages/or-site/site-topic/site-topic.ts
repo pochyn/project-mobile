@@ -64,7 +64,6 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
 @Component({
   selector: 'page-site-topic',
   templateUrl: 'site-topic.html',

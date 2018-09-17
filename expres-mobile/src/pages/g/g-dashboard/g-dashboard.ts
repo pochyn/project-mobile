@@ -21,7 +21,6 @@ import { HomePage } from '../../home/home';
  // post inteface
 
 
-@IonicPage()
 @Component({
   selector: 'page-g-dashboard',
   templateUrl: 'g-dashboard.html',

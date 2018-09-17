@@ -57,7 +57,19 @@ import { GazetaOchnaPage } from "../pages/or_gazeta/gazeta-ochna/gazeta-ochna"
 import { GazetaShowPage } from "../pages/or_gazeta/gazeta-show/gazeta-show"
 import { GazetaTopicPage } from "../pages/or_gazeta/gazeta-topic/gazeta-topic"
 
-import { SiteApprovovedMediaplansPage } from "../pages/or-site/site-approvoved-mediaplans/site-approvoved-mediaplans"
+import {KvAprovedMediaplansPage} from "../pages/kv/kv-aproved-mediaplans/kv-aproved-mediaplans"
+import {KvAprovedPostsPage} from "../pages/kv/kv-aproved-posts/kv-aproved-posts"
+import {KvCreatePostPage} from "../pages/kv/kv-create-post/kv-create-post"
+import {KvDashboardPage} from "../pages/kv/kv-dashboard/kv-dashboard"
+import {KvNewPage} from "../pages/kv/kv-new/kv-new"
+import {KvNewGazetaPage} from "../pages/kv/kv-new-gazeta/kv-new-gazeta"
+import {KvNewLvivPage} from "../pages/kv/kv-new-lviv/kv-new-lviv"
+import {KvNewRegionsPage} from "../pages/kv/kv-new-regions/kv-new-regions"
+import {KvOwnPostsPage} from "../pages/kv/kv-own-posts/kv-own-posts"
+import {KvShowPage} from "../pages/kv/kv-show/kv-show"
+import {KvNewPostPage} from "../pages/kv/kv-new-post/kv-new-post"
+import {KvNewOchnaPage} from "../pages/kv/kv-new-ochna/kv-new-ochna"
+
 import { SiteApprovovedSitePage } from "../pages/or-site/site-approvoved-site/site-approvoved-site"
 import { SiteDashboardPage } from "../pages/or-site/site-dashboard/site-dashboard"
 import { SiteNewPage } from "../pages/or-site/site-new/site-new"
@@ -114,7 +126,6 @@ import { HttpClientModule } from '@angular/common/http';
     GazetaOchnaPage,
     GazetaShowPage,
     GazetaTopicPage,
-    SiteApprovovedMediaplansPage,
     SiteApprovovedSitePage,
     SiteDashboardPage,
     SiteNewPage,
@@ -130,7 +141,19 @@ import { HttpClientModule } from '@angular/common/http';
     GrApprovedMediaplansPage,
     GrNewMediaplansPage,
     GrCreateMediaPage,
-    GrCreatePostPage
+    GrCreatePostPage,
+    KvAprovedMediaplansPage,
+    KvAprovedPostsPage,
+    KvCreatePostPage,
+    KvDashboardPage,
+    KvNewGazetaPage,
+    KvNewRegionsPage,
+    KvNewLvivPage,
+    KvNewPage,
+    KvOwnPostsPage,
+    KvShowPage,
+    KvNewPostPage,
+    KvNewOchnaPage
   ],
   imports: [
     BrowserModule,
@@ -179,7 +202,6 @@ import { HttpClientModule } from '@angular/common/http';
     GazetaOchnaPage,
     GazetaShowPage,
     GazetaTopicPage,
-    SiteApprovovedMediaplansPage,
     SiteApprovovedSitePage,
     SiteDashboardPage,
     SiteNewPage,
@@ -195,7 +217,19 @@ import { HttpClientModule } from '@angular/common/http';
     GrApprovedMediaplansPage,
     GrNewMediaplansPage,
     GrCreateMediaPage,
-    GrCreatePostPage
+    GrCreatePostPage,
+    KvAprovedMediaplansPage,
+    KvAprovedPostsPage,
+    KvCreatePostPage,
+    KvDashboardPage,
+    KvNewGazetaPage,
+    KvNewRegionsPage,
+    KvNewLvivPage,
+    KvNewPage,
+    KvOwnPostsPage,
+    KvShowPage,
+    KvNewPostPage,
+    KvNewOchnaPage
   ],
   providers: [
     StatusBar,

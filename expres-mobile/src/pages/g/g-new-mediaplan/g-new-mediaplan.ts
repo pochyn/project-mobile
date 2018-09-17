@@ -70,7 +70,6 @@ interface PostId extends Post {
 }
 
 
-@IonicPage()
 @Component({
   selector: 'page-g-new-mediaplan',
   templateUrl: 'g-new-mediaplan.html',

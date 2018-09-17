@@ -22,7 +22,7 @@ import { HomePage } from '../../home/home';
  */
 
  // post inteface
-@IonicPage()
+
 @Component({
   selector: 'page-gazeta-dashboard',
   templateUrl: 'gazeta-dashboard.html',

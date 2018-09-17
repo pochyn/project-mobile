@@ -70,7 +70,6 @@ interface PostId extends Post {
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-gr-new-gazeta',
   templateUrl: 'gr-new-gazeta.html',

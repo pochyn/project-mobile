@@ -62,7 +62,6 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-@IonicPage()
 @Component({
   selector: 'page-all-show-media',
   templateUrl: 'all-show-media.html',

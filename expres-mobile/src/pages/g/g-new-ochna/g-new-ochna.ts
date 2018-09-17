@@ -69,7 +69,7 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
+
 @Component({
   selector: 'page-g-new-ochna',
   templateUrl: 'g-new-ochna.html',

@@ -15,7 +15,7 @@ import {GrApprovedMediaplansPage} from '../gr-approved-mediaplans/gr-approved-me
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-gr-approved-posts',
   templateUrl: 'gr-approved-posts.html',

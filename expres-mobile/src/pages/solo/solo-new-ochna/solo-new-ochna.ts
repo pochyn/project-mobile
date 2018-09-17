@@ -65,7 +65,7 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
+
 @Component({
   selector: 'page-solo-new-ochna',
   templateUrl: 'solo-new-ochna.html',

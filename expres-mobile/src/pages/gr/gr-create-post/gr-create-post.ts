@@ -63,7 +63,7 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-@IonicPage()
+
 @Component({
   selector: 'page-gr-create-post',
   templateUrl: 'gr-create-post.html',

@@ -6,7 +6,6 @@ import {GrCreateMediaPage} from '../gr-create-media/gr-create-media'
 import {GrCreatePostPage} from '../gr-create-post/gr-create-post'
 import { GNewMediaplanPage } from '../../g/g-new-mediaplan/g-new-mediaplan'
 
-@IonicPage()
 @Component({
   selector: 'page-gr-new',
   templateUrl: 'gr-new.html',

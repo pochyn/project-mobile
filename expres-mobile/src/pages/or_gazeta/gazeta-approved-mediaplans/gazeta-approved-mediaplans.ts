@@ -62,7 +62,6 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
 @Component({
   selector: 'page-gazeta-approved-mediaplans',
   templateUrl: 'gazeta-approved-mediaplans.html',

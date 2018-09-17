@@ -60,7 +60,7 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-@IonicPage()
+
 @Component({
   selector: 'page-gr-archieve',
   templateUrl: 'gr-archieve.html',

@@ -18,7 +18,7 @@ import { GazetaTopicPage } from '../gazeta-topic/gazeta-topic'
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-gazeta-new',
   templateUrl: 'gazeta-new.html',

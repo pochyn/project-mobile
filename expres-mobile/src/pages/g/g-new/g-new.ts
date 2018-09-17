@@ -20,7 +20,6 @@ import { GNewOchnaPage } from '../g-new-ochna/g-new-ochna'
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-g-new',
   templateUrl: 'g-new.html',

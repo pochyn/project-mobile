@@ -1,0 +1,7 @@
+<ion-content padding>
+  <ion-list>
+      <button ion-item  *ngFor="let post of media_posts | async" (click)='show(post)'>
+          <font size="2" color="grey">{{post.data.date}} - {{post.data.name}} </font> <br/> {{post.data.content}}
+      </button>  
+    </ion-list>
+</ion-content>

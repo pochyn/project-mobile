@@ -60,7 +60,6 @@ interface Post {
 interface PostId extends Post { 
   id: string; 
 }
-@IonicPage()
 @Component({
   selector: 'page-gazeta-approved-site',
   templateUrl: 'gazeta-approved-site.html',

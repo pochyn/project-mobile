@@ -62,7 +62,6 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
 @Component({
   selector: 'page-site-show',
   templateUrl: 'site-show.html',

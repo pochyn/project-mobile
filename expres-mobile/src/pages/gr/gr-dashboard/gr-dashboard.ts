@@ -8,6 +8,7 @@ import { HomePage } from '../../home/home';
 import {GApprovedPostsPage} from '../../g/g-approved-posts/g-approved-posts'
 import {GrApprovedPostsPage} from '../gr-approved-posts/gr-approved-posts'
 import {GrNewPostsPage} from '../gr-new-posts/gr-new-posts'
+import {GrCreatePostPage} from '../gr-create-post/gr-create-post'
 
 
 /**
@@ -55,7 +56,7 @@ interface PostId extends Post {
 }
 //to get data from database
 
-@IonicPage()
+
 @Component({
   selector: 'page-gr-dashboard',
   templateUrl: 'gr-dashboard.html',
@@ -72,7 +73,7 @@ export class GrDashboardPage {
 
 
   create(){
-    this.navCtrl.push(GrNewPage);
+    this.navCtrl.push(GrCreatePostPage);
   }
 
   logout(){

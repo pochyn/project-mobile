@@ -10,7 +10,7 @@ import { GNewMediaplanPage } from '../../g/g-new-mediaplan/g-new-mediaplan'
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-site-new',
   templateUrl: 'site-new.html',

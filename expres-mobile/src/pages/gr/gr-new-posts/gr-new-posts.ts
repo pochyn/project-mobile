@@ -14,7 +14,6 @@ import {GrNewMediaplansPage} from '../gr-new-mediaplans/gr-new-mediaplans'
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-gr-new-posts',
   templateUrl: 'gr-new-posts.html',

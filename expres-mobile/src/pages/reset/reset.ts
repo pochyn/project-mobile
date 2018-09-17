@@ -13,7 +13,7 @@ const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA
 var usercreds;
 var email;
 
-@IonicPage()
+
 @Component({
   selector: 'page-reset',
   templateUrl: 'reset.html',

@@ -12,6 +12,7 @@ import { GDashboardPage } from '../../pages/g/g-dashboard/g-dashboard'
 import { SoloDashboardPage } from '../../pages/solo/solo-dashboard/solo-dashboard'
 import { SiteDashboardPage } from '../../pages/or-site/site-dashboard/site-dashboard'
 import { GazetaDashboardPage } from '../../pages/or_gazeta/gazeta-dashboard/gazeta-dashboard'
+import { KvDashboardPage } from '../../pages/kv/kv-dashboard/kv-dashboard'
 /*
   Generated class for the AuthProvider provider.
 
@@ -96,7 +97,7 @@ export class AuthProvider {
       this.navCtrl.push(SiteDashboardPage);
     }
     if (posada == 'Керівник відділу') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(KvDashboardPage);
     }
     if (posada == 'Головний редактор') {
       this.navCtrl.push(GrDashboardPage);
@@ -149,7 +150,7 @@ export class AuthProvider {
       this.navCtrl.push(SiteDashboardPage);
     }
     if (posada == 'Керівник відділу') {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(KvDashboardPage);
     }
     if (posada == 'Головний редактор') {
       this.navCtrl.push(GrDashboardPage);
@@ -182,7 +183,7 @@ export class AuthProvider {
           this.navCtrl.push(SiteDashboardPage);
         }
         if (posada == 'Керівник відділу') {
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(KvDashboardPage);
         }
         if (posada == 'Головний редактор') {
           this.navCtrl.push(GrDashboardPage);

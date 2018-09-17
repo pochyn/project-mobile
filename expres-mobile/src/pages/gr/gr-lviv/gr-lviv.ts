@@ -68,7 +68,6 @@ interface PostId extends Post {
  * Ionic pages and navigation.
  */
 //to get data from database
-@IonicPage()
 @Component({
   selector: 'page-gr-lviv',
   templateUrl: 'gr-lviv.html',

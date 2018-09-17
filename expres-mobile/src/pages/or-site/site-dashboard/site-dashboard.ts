@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {SiteApprovovedMediaplansPage} from '../site-approvoved-mediaplans/site-approvoved-mediaplans'
+import {GazetaApprovedMediaplansPage} from '../../or_gazeta/gazeta-approved-mediaplans/gazeta-approved-mediaplans'
 import {SiteApprovovedSitePage} from '../site-approvoved-site/site-approvoved-site'
 import {SiteNewPage} from '../site-new/site-new'
 import { HomePage } from '../../home/home';
@@ -12,14 +12,14 @@ import { HomePage } from '../../home/home';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-site-dashboard',
   templateUrl: 'site-dashboard.html',
 })
 export class SiteDashboardPage {
 
-  tab2Root = SiteApprovovedMediaplansPage;
+  tab2Root = GazetaApprovedMediaplansPage;
   tab3Root = SiteApprovovedSitePage;
 
   constructor(public navCtrl: NavController) {

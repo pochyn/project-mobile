@@ -67,7 +67,7 @@ interface PostId extends Post {
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-gr-approved-mediaplans',
   templateUrl: 'gr-approved-mediaplans.html',

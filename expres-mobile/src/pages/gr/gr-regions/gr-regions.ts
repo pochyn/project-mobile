@@ -68,7 +68,6 @@ interface PostId extends Post {
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-gr-regions',
   templateUrl: 'gr-regions.html',

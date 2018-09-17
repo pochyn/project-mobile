@@ -68,7 +68,6 @@ interface PostId extends Post {
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-@IonicPage()
 @Component({
   selector: 'page-gr-negazeta',
   templateUrl: 'gr-negazeta.html',

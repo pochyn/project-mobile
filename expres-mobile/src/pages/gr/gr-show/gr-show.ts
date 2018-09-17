@@ -63,7 +63,6 @@ interface PostId extends Post {
   id: string; 
 }
 
-@IonicPage()
 @Component({
   selector: 'page-gr-show',
   templateUrl: 'gr-show.html',
