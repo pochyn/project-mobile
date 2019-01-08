@@ -158,9 +158,9 @@ export class GrRegionsPage {
         {param: post});
   }
   showMore(post){
-    var buttonId = "button-" + post.id;
+    var buttonId = "button-" + post.id + "-2";
     var buttonElement = document.getElementById(buttonId);
-    var divId = "div-" + post.id;
+    var divId = "div-" + post.id + "-2";
     var divElement = document.getElementById(divId);
 
 

@@ -239,9 +239,9 @@ export class GrNewGazetaPage {
 
 
   showMore(post){
-    var buttonId = "button-" + post.id;
+    var buttonId = "button-" + post.id+ "-7";
     var buttonElement = document.getElementById(buttonId);
-    var divId = "div-" + post.id;
+    var divId = "div-" + post.id + "-7";
     var divElement = document.getElementById(divId);
 
 

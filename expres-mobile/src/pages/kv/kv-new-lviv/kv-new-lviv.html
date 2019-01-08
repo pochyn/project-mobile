@@ -9,8 +9,8 @@
     </ion-card-header>
   
     <ion-card-content>
-        <div id=div-{{post.id}}>{{post.data.content | slice:0:80}}</div> 
-        <div><button ion-button round outline  style="margin-left: 2%;" id=button-{{post.id}} class="btnShow" (click)="showMore(post);">(більше)</button></div>
+        <div id=div-{{post.id}}-12>{{post.data.content | slice:0:80}}</div> 
+        <div><button ion-button round outline  style="margin-left: 2%;" id=button-{{post.id}}-12 class="btnShow" (click)="showMore(post);">(більше)</button></div>
         <button ion-button icon-only outline  class="btnOpen" style="float: right" (click)="showCheckbox(post.id)" ><ion-icon name="arrow-down"></ion-icon></button>
         
       </ion-card-content>

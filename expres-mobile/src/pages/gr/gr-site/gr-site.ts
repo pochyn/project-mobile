@@ -152,9 +152,9 @@ export class GrSitePage {
         {param: post});
   }
   showMore(post){
-    var buttonId = "button-" + post.id;
+    var buttonId = "button-" + post.id + "-1";
     var buttonElement = document.getElementById(buttonId);
-    var divId = "div-" + post.id;
+    var divId = "div-" + post.id + "-1";
     var divElement = document.getElementById(divId);
 
 

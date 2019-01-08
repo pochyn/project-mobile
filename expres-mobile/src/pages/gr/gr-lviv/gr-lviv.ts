@@ -157,9 +157,9 @@ export class GrLvivPage {
         {param: post});
   }
   showMore(post){
-    var buttonId = "button-" + post.id;
+    var buttonId = "button-" + post.id + "-9";
     var buttonElement = document.getElementById(buttonId);
-    var divId = "div-" + post.id;
+    var divId = "div-" + post.id + "-9";
     var divElement = document.getElementById(divId);
 
 
